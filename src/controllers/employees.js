@@ -38,16 +38,7 @@ module.exports = {
 
         const found_index = fake_db.findIndex(employee => employee.id === id);
 
-        fake_db[found_index] = {
-            id,
-            name,
-            birth_date,
-            gender,
-            email,
-            cpf,
-            start_date,
-            team
-        };
+        fake_db[found_index] = updated_employee;
         res.json({ message: 'Updated employee', updated_employee });
     },
 
